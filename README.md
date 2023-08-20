@@ -1,1 +1,1 @@
-# SymptomsEvaluation.Solution
+# Symptoms Evaluation - Strategy Pattern - C#
