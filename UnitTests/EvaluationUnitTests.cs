@@ -110,5 +110,44 @@ namespace UnitTests
 
             evaluation.Message.Should().Be(Illness.NotHearthAttack);
         }
+
+        [Test]
+        public void Should_TryConfirmHeartBurnAndThenTryeConfirmHeartAttack_ReturnHeartAttack()
+        {
+            // Arrange
+            var symptoms = new List<string>
+            {
+                Symptoms.ChestPain,
+                Symptoms.NumbnessInArm
+            };
+
+            this._pacient.AddSymptoms(symptoms);
+
+            var doctor = new Doctor();
+
+            // Act
+            /*HeartBurn Strategy*/
+
+            doctor.DefineStrategy(new HeartBurnStrategy());
+
+            var evaluation = doctor.EvalutateSymptoms(this._pacient);
+
+            // Assert
+            evaluation.IsHeartBurn.Should().BeFalse();
+
+            evaluation.Message.Should().Be(Illness.NotHearthBurn);
+
+            // Act
+            /*HeartAttack Strategy*/
+
+            doctor.DefineStrategy(new HeartAttackStrategy());
+
+            evaluation = doctor.EvalutateSymptoms(this._pacient);
+
+            // Assert
+            evaluation.IsHeartAttack.Should().BeTrue();
+
+            evaluation.Message.Should().Be(Illness.HearthAttack);
+        }
     }
 }
