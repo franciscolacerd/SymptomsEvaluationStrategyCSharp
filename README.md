@@ -15,7 +15,7 @@ https://en.wikipedia.org/wiki/Strategy_pattern
 
 ## C# Implementation
 
-### 1. Declare Hospital entities 
+### 1. Declare entities 
 
 #### Pacient
 ```c#
