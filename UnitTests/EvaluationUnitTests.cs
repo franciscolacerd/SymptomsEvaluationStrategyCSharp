@@ -112,7 +112,7 @@ namespace UnitTests
         }
 
         [Test]
-        public void Should_TryConfirmHeartBurnAndThenTryeConfirmHeartAttack_ReturnHeartAttack()
+        public void Should_TryConfirmHeartBurnAndThenTryConfirmHeartAttack_ReturnHeartAttack()
         {
             // Arrange
             var symptoms = new List<string>
