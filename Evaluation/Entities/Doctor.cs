@@ -11,7 +11,7 @@ namespace Evaluation.Entities
             this._strategy = strategy;
         }
 
-        public Entities.Evaluation EvalutateSymptoms(Pacient pacient)
+        public Entities.Evaluation EvaluateSymptoms(Pacient pacient)
         {
             return this._strategy.EvaluateSymptoms(pacient);
         }

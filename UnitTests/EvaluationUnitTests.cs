@@ -30,7 +30,7 @@ namespace UnitTests
 
             doctor.DefineStrategy(new HeartBurnStrategy());
 
-            var evaluation = doctor.EvalutateSymptoms(this._pacient);
+            var evaluation = doctor.EvaluateSymptoms(this._pacient);
 
             // Assert
             evaluation.IsHeartBurn.Should().BeTrue();
@@ -54,7 +54,7 @@ namespace UnitTests
 
             doctor.DefineStrategy(new HeartBurnStrategy());
 
-            var evaluation = doctor.EvalutateSymptoms(this._pacient);
+            var evaluation = doctor.EvaluateSymptoms(this._pacient);
 
             // Assert
             evaluation.IsHeartBurn.Should().BeFalse();
@@ -79,7 +79,7 @@ namespace UnitTests
 
             doctor.DefineStrategy(new HeartAttackStrategy());
 
-            var evaluation = doctor.EvalutateSymptoms(this._pacient);
+            var evaluation = doctor.EvaluateSymptoms(this._pacient);
 
             // Assert
             evaluation.IsHeartAttack.Should().BeTrue();
@@ -103,7 +103,7 @@ namespace UnitTests
 
             doctor.DefineStrategy(new HeartAttackStrategy());
 
-            var evaluation = doctor.EvalutateSymptoms(this._pacient);
+            var evaluation = doctor.EvaluateSymptoms(this._pacient);
 
             // Assert
             evaluation.IsHeartAttack.Should().BeFalse();
@@ -130,7 +130,7 @@ namespace UnitTests
 
             doctor.DefineStrategy(new HeartBurnStrategy());
 
-            var evaluation = doctor.EvalutateSymptoms(this._pacient);
+            var evaluation = doctor.EvaluateSymptoms(this._pacient);
 
             // Assert
             evaluation.IsHeartBurn.Should().BeFalse();
@@ -142,7 +142,7 @@ namespace UnitTests
 
             doctor.DefineStrategy(new HeartAttackStrategy());
 
-            evaluation = doctor.EvalutateSymptoms(this._pacient);
+            evaluation = doctor.EvaluateSymptoms(this._pacient);
 
             // Assert
             evaluation.IsHeartAttack.Should().BeTrue();
