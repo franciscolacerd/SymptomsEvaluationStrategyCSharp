@@ -23,11 +23,11 @@ namespace UnitTests
                 Symptoms.ChestPain
             };
 
-            // Act
             this._pacient.AddSymptoms(symptoms);
 
             var doctor = new Doctor();
 
+            // Act
             doctor.DefineStrategy(new HeartBurnStrategy());
 
             var evaluation = doctor.EvaluateSymptoms(this._pacient);
@@ -47,11 +47,11 @@ namespace UnitTests
                 Symptoms.NumbnessInArm
             };
 
-            // Act
             this._pacient.AddSymptoms(symptoms);
 
             var doctor = new Doctor();
 
+            // Act
             doctor.DefineStrategy(new HeartBurnStrategy());
 
             var evaluation = doctor.EvaluateSymptoms(this._pacient);
@@ -72,11 +72,11 @@ namespace UnitTests
                 Symptoms.NumbnessInArm
             };
 
-            // Act
             this._pacient.AddSymptoms(symptoms);
 
             var doctor = new Doctor();
 
+            // Act
             doctor.DefineStrategy(new HeartAttackStrategy());
 
             var evaluation = doctor.EvaluateSymptoms(this._pacient);
@@ -96,11 +96,11 @@ namespace UnitTests
                 Symptoms.ChestPain
             };
 
-            // Act
             this._pacient.AddSymptoms(symptoms);
 
             var doctor = new Doctor();
 
+            // Act
             doctor.DefineStrategy(new HeartAttackStrategy());
 
             var evaluation = doctor.EvaluateSymptoms(this._pacient);
